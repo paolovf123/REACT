@@ -1,0 +1,37 @@
+.ListItem {
+    width: 200px;
+    height: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.ListItem img {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    /*filter: grayscale(0.5);*/
+}
+.check-yes:hover {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;   
+}
+.x-yes:hover {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;   
+}
+.MichiText {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.MichiText--complete {
+    text-decoration: line-through;
+}

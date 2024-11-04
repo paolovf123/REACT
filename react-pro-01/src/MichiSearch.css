@@ -1,0 +1,24 @@
+.MichiSearch {
+    background-color:white;
+    border-radius: 10px;
+    border: 1px solid black;
+    min-width: 400px;
+    height: 40px;
+    position: relative;
+    font-size: 24px;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.MichiSearch::placeholder {
+    color: #A5A5A5;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.MichiSearch:focus {
+    outline-color: rgb(22, 211, 91);
+}

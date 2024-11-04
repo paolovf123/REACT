@@ -1,6 +1,7 @@
+import './MichiList.css'
 function MichiList (props){
     return(
-      <ul>
+      <ul className='GatosList'>
         {props.children}
       </ul>
     );
