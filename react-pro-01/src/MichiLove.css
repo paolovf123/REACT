@@ -1,4 +1,4 @@
-.MichiSearch {
+.MichiLove {
     background-color:white;
     border-radius: 10px;
     border: 1px solid black;
@@ -13,12 +13,12 @@
     justify-content: center;
 }
 
-.MichiSearch::placeholder {
+.MichiLove::placeholder {
     color: #A5A5A5;
     font-family: 'Montserrat';
     font-weight: 500;
 }
 
-.MichiSearch:focus {
+.MichiLove:focus {
     outline-color: rgb(22, 211, 91);
 }
