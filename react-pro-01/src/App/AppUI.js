@@ -18,15 +18,21 @@ function AppUI({
     setClick,
     setNuevoMichi,
     presionarenter,
-    nuevoMichi
+    nuevoMichi,
+    loading,
+    error
 }){
      
   return (  
     <React.Fragment>
+
       <MichiCounter completed={countMichis} total={totalMichis}/>
       <MichiSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <MichiList>
+        {loading && <p>Carganding...</p>}
+        {error && <p>Error en loa carga!!</p>}
+        {(!loading && searchedMichi==0) && <p>Ingresa un nuevo michi para acariciar</p>}
         {searchedMichi.map(michi =>(
           <MichiItem 
           key={michi.text} 

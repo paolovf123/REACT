@@ -5,7 +5,12 @@ import {AppUI} from './AppUI';
 import React from 'react';
 
 function App() {
-  const [michiPendiente, saveMichis] = useLocalStorage('Michis_V1',[]);
+  const {
+    item: michiPendiente,
+    saveItem: saveMichis,
+    loading,
+    error
+  }= useLocalStorage('Michis_V1',[]);
 
   const [searchValue, setSearchValue]= React.useState('');
 
@@ -16,6 +21,7 @@ function App() {
   const searchedMichi = michiPendiente.filter((michi)=>{
       return michi.text.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase());
     }
+    
   );
 
   const totalMichis = michiPendiente.length;
@@ -47,6 +53,8 @@ function App() {
 
   return(
     <AppUI
+    loading={loading}
+    error={error}
     countMichis={countMichis}
     totalMichis={totalMichis} 
     searchValue={searchValue} 
