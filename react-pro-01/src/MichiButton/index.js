@@ -1,6 +1,6 @@
 import React from 'react';
 import './MichiButton.css'
-function MichiButton ({click, setClick, addMichi}){
+function MichiButton ({click, setClick}){
     return(
       <>
         <button className="MichiButton" onClick={()=>{
