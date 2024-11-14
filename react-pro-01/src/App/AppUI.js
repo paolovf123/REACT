@@ -4,6 +4,9 @@ import { MichiList } from '../MichiList';
 import { MichiItem } from '../MichiItem';
 import { MichiButton } from '../MichiButton';
 import { AgregarMichi } from '../AgregarMichi';
+import { MichiLoading } from '../MichiLoading';
+import { MichiError } from '../MichiError';
+import { MichiEmpty } from '../MichiEmpty';
 import React from 'react';
 
 function AppUI({
@@ -30,9 +33,9 @@ function AppUI({
       <MichiSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <MichiList>
-        {loading && <p>Carganding...</p>}
-        {error && <p>Error en loa carga!!</p>}
-        {(!loading && searchedMichi==0) && <p>Ingresa un nuevo michi para acariciar</p>}
+        {loading && <MichiLoading/>}
+        {error && <MichiError/>}
+        {(!loading && searchedMichi==0) && <MichiEmpty/>}
         {searchedMichi.map(michi =>(
           <MichiItem 
           key={michi.text} 
